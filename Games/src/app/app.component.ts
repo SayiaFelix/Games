@@ -8,11 +8,5 @@ import { Game } from './game';
 })
 export class AppComponent {
 
-  games: Game[]=[
-
-    {id:1,name:'Fifa 2022'},
-    {id:2,name:'PES 2022'},
-    {id:3,name:'Dream League'},
-  ];
 
 }
