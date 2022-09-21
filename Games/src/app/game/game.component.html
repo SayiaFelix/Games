@@ -3,6 +3,7 @@
     <ul>
         <li *ngFor="let game of games">
            {{game.id}} - {{game.name}}
+           <app-gamedetail [game]="game"></app-gamedetail>
         </li>
     </ul>
     <P *ngIf="games.length>2">To Many though The best of 2022</P>
