@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Game } from './game';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  games: string[] = [];
 
-  constructor(){
-    this.games=['FIFA 22','PES 22','Dream League']
+  games: Game[]=[
 
+    {id:1,name:'Fifa 2022'},
+    {id:2,name:'PES 2022'},
+    {id:3,name:'Dream League'},
+  ];
 
-
-  }
-  
 }

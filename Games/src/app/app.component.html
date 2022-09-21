@@ -2,9 +2,9 @@
 <h1>2022 GAMES</h1>
 <ul>
     <li *ngFor="let game of games">
-        {{game}}
+       {{game.id}} - {{game.name}}
     </li>
 </ul>
-<P>The best of 2022</P>
+<P *ngIf="games.length>2">To Many though The best of 2022</P>
 
 </div>
