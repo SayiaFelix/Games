@@ -9,9 +9,9 @@ import { Game } from '../game';
 export class GameComponent implements OnInit {
 
   games:Game[]=[
-    {id:1,name:'FIFA 22',description:'love the graphics'},
+    {id:1,name:'FIFA 22',description:'Love the graphics'},
     {id:2,name:'PES 22',description:'The speed is awesome while using it'},
-    {id:3,name:'Dream League 2022',description:'compatible in my device'}
+    {id:3,name:'Dream League 2022',description:'Compatible in my device'}
   
     
   ]
