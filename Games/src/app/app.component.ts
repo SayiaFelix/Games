@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Games';
+  games: string[] = [];
+
+  constructor(){
+    this.games=['FIFA 22','PES 22','Dream League']
+
+
+
+  }
+  
 }
