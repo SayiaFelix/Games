@@ -1,11 +1,13 @@
 <div>
     <h1>2022 GAMES</h1>
+    <hr>
     <ul>
-        <li *ngFor="let game of games">
-           {{game.id}} - {{game.name}}
-           <app-gamedetail [game]="game"></app-gamedetail>
-        </li>
+        <div *ngFor="let game of games; let i=index">
+            <li>{{game.name}} </li>
+            
+            <button (click)="toggleDetail(i)">Toggle</button>
+           <app-gamedetail *ngIf="game.showDescription" [game]="game"></app-gamedetail>
+        </div>
     </ul>
     <P *ngIf="games.length>2">To Many though The best of 2022</P>
-    
-    </div>
+
