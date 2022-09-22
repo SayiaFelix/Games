@@ -6,7 +6,7 @@
             <li>{{game.name}} </li>
             
             <button (click)="toggleDetail(i)">Toggle</button>
-           <app-gamedetail *ngIf="game.showDescription" [game]="game"></app-gamedetail>
+           <app-gamedetail *ngIf="game.showDescription" [game]="game"  (isComplete)="completeGame($event,i)"></app-gamedetail>
         </div>
     </ul>
     <P *ngIf="games.length>2">To Many though The best of 2022</P>

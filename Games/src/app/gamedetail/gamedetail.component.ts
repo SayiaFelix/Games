@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Game } from '../game';
 
 @Component({
@@ -9,6 +9,14 @@ import { Game } from '../game';
 export class GamedetailComponent implements OnInit {
 
   @Input() game:Game | undefined;
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  gameSuper(complete:boolean){
+    this.isComplete.emit(complete);
+
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

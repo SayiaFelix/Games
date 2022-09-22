@@ -21,6 +21,13 @@ toggleDetail(index: number){
 this.games[index].showDescription=!this.games[index].showDescription;
 }
 
+completeGame(isComplete: any,index: number){
+  if(isComplete){
+    this.games.splice(index,1);
+  }
+
+
+}
 
 
   constructor() { }
