@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { GamedetailComponent } from './gamedetail/gamedetail.component';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    GamedetailComponent
+    GamedetailComponent,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,

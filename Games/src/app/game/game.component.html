@@ -3,7 +3,7 @@
     <hr>
     <ul>
         <div *ngFor="let game of games; let i=index">
-            <li>{{game.name}} </li>
+            <li appStrikethrough>{{game.name}} </li>
             
             <button (click)="toggleDetail(i)">Toggle</button>
            <app-gamedetail *ngIf="game.showDescription" [game]="game"  (isComplete)="completeGame($event,i)"></app-gamedetail>
