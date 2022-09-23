@@ -7,18 +7,18 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class StrikethroughDirective {
 
   constructor(private elem:ElementRef) {
-    // this.elem.nativeElement.style.textDecotation = 'line-through';
+    this.elem.nativeElement.style.textDecotation = 'line-through';
    }
-@HostListener('click') onClicks(){
-  this.textDeco('line-through');
-}
+// @HostListener('click') onClicks(){
+//   this.textDeco('line-through');
+// }
 
-@HostListener('dbClick') onDoubleClicks(){
-  this.textDeco('None')
-}
+// @HostListener('dbClick') onDoubleClicks(){
+//   this.textDeco('None')
+// }
 
-  private textDeco(action:string){
-    this.elem.nativeElement.style.textDecotation=action;
+//   private textDeco(action:string){
+//     this.elem.nativeElement.style.textDecotation=action;
 
-}
+// }
 }
