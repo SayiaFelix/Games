@@ -5,7 +5,7 @@
         <div *ngFor="let game of games; let i=index">
             <li appStrikethrough> <b>{{game.name}}</b> played on {{game.playDate|date}}</li>
             
-            <button (click)="toggleDetail(i)">Toggle</button>
+            <button class="btn btn-outline-success btn-sm mb-4 mt-1"(click)="toggleDetail(i)">Details</button>
            <app-gamedetail *ngIf="game.showDescription" [game]="game"  (isComplete)="completeGame($event,i)"></app-gamedetail>
         </div>
     </ul>
