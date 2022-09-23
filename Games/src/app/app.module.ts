@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { GamedetailComponent } from './gamedetail/gamedetail.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
     GamedetailComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

@@ -23,9 +23,12 @@ this.games[index].showDescription=!this.games[index].showDescription;
 
 completeGame(isComplete: any,index: number){
   if(isComplete){
+    let toDelete = confirm(`Are you sure you want to delete ${this.games[index].name}?`)
+   if(toDelete){
+    
     this.games.splice(index,1);
   }
-
+  }
 
 }
 
