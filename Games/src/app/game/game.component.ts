@@ -32,6 +32,16 @@ completeGame(isComplete: any,index: number){
 
 }
 
+addNewGame(game: Game){
+
+  let gameLenth = this.games.length;
+  game.id = gameLenth + 1;
+  
+  game.playDate = new Date(game.playDate);
+  this.games.push(game);
+
+
+}
 
   constructor() { }
 
