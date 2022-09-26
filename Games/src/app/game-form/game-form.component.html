@@ -2,23 +2,24 @@
 <div class="container-fluid">
     <h2 class="text-center">Create a new Goal</h2>
     <hr>
-    <form>
+    <form  #gameForm='ngForm'>
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
-  
+            <input type="text" required class="form-control" [(ngModel)]="newGame.name" name="name" id="name">
+            Display {{newGame.name}}
         </div>
         <div class="form-group">
   
             <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-  
+            <textarea class="form-control" id="description" [(ngModel)]="newGame.description" description="description" rows="4" required></textarea>
+            <!-- Display {{newGame.description}} -->
         </div>
-        <div class="form-group mt-5">
+        <div class="form-group mt-3">
             <label for="complete">Played</label>
-            <input type='date' id="complete" required>
+            <input type='date' id="complete" [(ngModel)]="newGame.playDate"  required>
   
         </div>
+        <button type="submit" class="btn btn-success mt-5">Add Game</button>
     </form>
   </div>
