@@ -1,13 +1,24 @@
 <div class="container">
-    <h1>2022 GAMES</h1>
-    <hr>
-    <ul>
-        <div *ngFor="let game of games; let i=index">
-            <li appStrikethrough> <b>{{game.name}}</b> played on {{game.playDate|date}}</li>
-            
-            <button class="btn btn-outline-success btn-sm mb-4 mt-1"(click)="toggleDetail(i)">Details</button>
-           <app-gamedetail *ngIf="game.showDescription" [game]="game"  (isComplete)="completeGame($event,i)"></app-gamedetail>
-        </div>
-    </ul>
-    <P *ngIf="games.length>2">To Many though The best of 2022</P>
+    <div class="row">
+        <div class="col-6">
+          <h1>2022 GAMES</h1>
+            <hr>
+            <ul>
+                <div *ngFor="let game of games; let i=index">
+                    <li appStrikethrough> <b>{{game.name}}</b> played on {{game.playDate|date}}</li>
+                    
+                    <button class="btn btn-outline-success btn-sm mb-4 mt-1"(click)="toggleDetail(i)">Details</button>
+                <app-gamedetail *ngIf="game.showDescription" [game]="game"  (isComplete)="completeGame($event,i)"></app-gamedetail>
+                </div>
+            </ul>
+            <P *ngIf="games.length>2">To Many though The best of 2022</P>
 
+        </div>
+
+        <div class="col-6">
+            <app-game-form></app-game-form>
+        </div>
+
+    </div>
+  
+</div>
