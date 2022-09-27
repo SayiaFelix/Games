@@ -10,7 +10,7 @@ import { GameService } from '../game-service/game.service';
 })
 export class GameComponent implements OnInit {
   games: Game[] | any;
-  
+
 
 
   // games:Game[]=[
@@ -48,7 +48,9 @@ addNewGame(game: Game){
 
 }
 
-  constructor() { }
+  constructor(gameService:GameService) { 
+    this.games = gameService.getGames();
+  }
 
   ngOnInit(): void {
   }
