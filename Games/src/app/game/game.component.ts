@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from '../alert-service/alert.service';
 import { Game } from '../game';
 import { GameService } from '../game-service/game.service';
 
@@ -10,6 +11,7 @@ import { GameService } from '../game-service/game.service';
 })
 export class GameComponent implements OnInit {
   games: Game[] | any;
+  alertService: AlertService | any;
 
 
 
@@ -29,9 +31,10 @@ this.games[index].showDescription=!this.games[index].showDescription;
 completeGame(isComplete: any,index: number){
   if(isComplete){
     let toDelete = confirm(`Are you sure you want to delete ${this.games[index].name}?`)
+
    if(toDelete){
-    
     this.games.splice(index,1);
+    this.alertService.alertMe('The game has been deleted')
   }
   }
 
@@ -48,8 +51,10 @@ addNewGame(game: Game){
 
 }
 
-  constructor(gameService:GameService) { 
+  constructor(gameService:GameService,alertService:AlertService) { 
     this.games = gameService.getGames();
+    this.alertService = alertService
+
   }
 
   ngOnInit(): void {
