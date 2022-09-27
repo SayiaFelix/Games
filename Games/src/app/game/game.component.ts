@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../game';
+import { GameService } from '../game-service/game.service';
 
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  styleUrls: ['./game.component.css'],
+  providers: [GameService]
 })
 export class GameComponent implements OnInit {
-  games: any;
+  games: Game[] | any;
+  
+
 
   // games:Game[]=[
   //   new Game(1,'FIFA 22','Love the Graphics',new Date(2020,0,18)),
