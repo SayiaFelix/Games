@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { AlertService } from '../alert-service/alert.service';
 import { Game } from '../game';
 import { GameService } from '../game-service/game.service';
 import { Quote } from '../quote-class/quote';
 
+
 @Component({
+
   selector: 'app-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css'],
@@ -14,6 +17,7 @@ export class GameComponent implements OnInit {
   games: Game[] | any;
   alertService: AlertService | any;
   quote:Quote | any;
+  
 
 
 
@@ -56,7 +60,7 @@ export class GameComponent implements OnInit {
   // ]
 
 
-  
+
 toggleDetail(index: number){
 this.games[index].showDescription=!this.games[index].showDescription;
 }
@@ -84,13 +88,25 @@ addNewGame(game: Game){
 
 }
 
-  constructor(gameService:GameService,alertService:AlertService) { 
+  constructor(gameService:GameService,alertService:AlertService, private http:HttpClient) { 
     this.games = gameService.getGames();
     this.alertService = alertService
 
   }
 
   ngOnInit(): void {
+
+    interface ApiResponse{
+      author: string
+      quote : string
+    }
+
+    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe((data: { author: string; quote: string; })=>{
+      this.quote = new Quote(data.author, data.quote)
+    })
+
+
   }
+
 
 }
