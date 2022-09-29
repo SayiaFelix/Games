@@ -103,7 +103,13 @@ addNewGame(game: Game){
 
     this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe((data: { author: string; quote: string; })=>{
       this.quote = new Quote(data.author, data.quote)
-    })
+    },err=>{
+      this.quote = new Quote("Winston Churchill","Never never give up!")
+
+
+    }
+    
+    )
 
 
   }
