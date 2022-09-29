@@ -25,7 +25,7 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
