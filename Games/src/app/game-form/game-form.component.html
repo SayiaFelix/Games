@@ -3,14 +3,14 @@
     <h2 class="text-center">Create a new Game</h2>
     <hr>
     <form (ngSubmit)="submitGame()" #gameForm='ngForm'>
-        <div class="form-group">
+        <div class="form-group mb-2">
   
-            <label for="name">Name</label>
+            <label for="name">Game</label>
             <input type="text" required class="form-control" [(ngModel)]="newGame.name" name="name"  #name='ngModel' id="name">
             Display {{newGame.name}}
         </div>
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-            <p>Name is required</p>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger mt-2">
+            <p>Game is required</p>
           </div>
         <div class="form-group">
   
@@ -18,7 +18,7 @@
             <textarea class="form-control" id="description" [(ngModel)]="newGame.description" name="description" #description="ngModel"  rows="4" required></textarea>
             <!-- Display {{newGame.description}} -->
         </div>
-        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger mt-2">
             <p>Description is required</p>
           </div>
         <div class="form-group mt-3">
@@ -29,6 +29,6 @@
         <div [hidden]="playDate.valid || playDate.pristine" class="alert alert-danger">
             <p>Date is required</p>
           </div>
-        <button type="submit" class="btn btn-success mt-5">Add Game</button>
+        <button type="submit" class="btn btn-lg btn-success mt-5">Game</button>
     </form>
   </div>
