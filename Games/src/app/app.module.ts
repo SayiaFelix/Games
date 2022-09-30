@@ -9,8 +9,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GameFormComponent } from './game-form/game-form.component';
 import { FormsModule } from '@angular/forms';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
 
 @NgModule({
   declarations: [
