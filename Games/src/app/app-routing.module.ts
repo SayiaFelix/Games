@@ -5,7 +5,7 @@ import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: 'games', component: GameComponent},
-  { path: 'about', component: AboutComponent},
+  { path: 'about', component: AboutComponent}
 
 ];
 
@@ -14,3 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [GameComponent,AboutComponent]
