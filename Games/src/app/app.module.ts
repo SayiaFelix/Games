@@ -10,6 +10,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { GameFormComponent } from './game-form/game-form.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AboutComponent } from './about/about.component';
     StrikethroughDirective,
     DateCountPipe,
     GameFormComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
