@@ -17,11 +17,13 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     GamedetailComponent,
+    AboutComponent,
+    GameComponent,
     StrikethroughDirective,
     DateCountPipe,
     GameFormComponent,
     NavbarComponent,
-    routingComponents,
+  
   ],
   imports: [
     BrowserModule,
