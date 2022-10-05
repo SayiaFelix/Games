@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './game/game.component';
 import { AboutComponent } from './about/about.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'games', component: GameComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'quotes', component: QuotesComponent}
+  { path: 'quotes', component: QuotesComponent},
+  { path:'**', component:NotFoundComponent},
+  { path: '', redirectTo:"/games", pathMatch:"full"},
 
 ];
 
