@@ -21,7 +21,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DateCountPipe,
     GameFormComponent,
     NavbarComponent,
-    routingComponents
+    routingComponents,
   ],
   imports: [
     BrowserModule,
