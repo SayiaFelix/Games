@@ -11,6 +11,7 @@ import { GameFormComponent } from './game-form/game-form.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DateCountPipe,
     GameFormComponent,
     NavbarComponent,
+    QuotesComponent,
   
   ],
   imports: [
