@@ -10,6 +10,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'quotes', component: QuotesComponent},
   { path:'**', component:NotFoundComponent},
+
+  
   { path: '', redirectTo:"/games", pathMatch:"full"},
 
 ];
