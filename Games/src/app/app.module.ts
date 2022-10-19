@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NavbarComponent,
     QuotesComponent,
     NotFoundComponent,
+    LoginComponent,
   
   ],
   imports: [

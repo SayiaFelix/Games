@@ -4,10 +4,11 @@ import { GameComponent } from './game/game.component';
 import { AboutComponent } from './about/about.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [ 
   { path: '', redirectTo:"/games", pathMatch:"full"},
-
+  { path: 'login', component: LoginComponent},
   { path: 'games', component: GameComponent},
   { path: 'about', component: AboutComponent},
   { path: 'quotes', component: QuotesComponent},
