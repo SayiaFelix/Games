@@ -14,9 +14,13 @@ import { Quote } from '../quote-class/quote';
   providers: [GameService]
 })
 export class GameComponent implements OnInit {
+logout() {
+throw new Error('Method not implemented.');
+}
   games: Game[] | any;
   alertService: AlertService | any;
   quote:Quote | any;
+socialAuthServive: any;
   
 
 
